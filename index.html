@@ -21,13 +21,14 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;600;800&display=swap');
 
         :root {
-            --bg-light: #FFFBFA;
-            --acc-color: #B5838D;
-            --acc-color-hover: #E5989B;
-            --text-primary: #2D2D2D;
-            --text-secondary: #6D6875;
-            --card-bg: #FFFFFF;
-            --card-shadow: 0 20px 40px rgba(181, 131, 141, 0.1);
+            --bg-light: #F6F3EC;
+            --acc-color: #6FA77B;
+            --acc-color-hover: #5a9166;
+            --text-primary: #333333;
+            --text-secondary: #555555;
+            --card-bg: #DDEADF;
+            --badge-color: #F6B7A9;
+            --card-shadow: 0 20px 40px rgba(111, 167, 123, 0.12);
             --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -89,10 +90,10 @@
         }
 
         nav.scrolled {
-            background: rgba(255, 251, 250, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(246, 243, 236, 0.97);
+            backdrop-filter: blur(12px);
             padding: 16px 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 20px rgba(111, 167, 123, 0.15);
         }
 
         .nav-container {
@@ -103,15 +104,16 @@
         }
 
         .logo {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--text-primary);
+            display: flex;
+            align-items: center;
             text-decoration: none;
         }
 
-        .logo span {
-            color: var(--acc-color);
+        .logo video,
+        .logo img {
+            height: 72px;
+            width: auto;
+            display: block;
         }
 
         /* Hero Section */
@@ -127,7 +129,7 @@
         #hero h1 {
             font-size: clamp(3rem, 10vw, 6rem);
             margin-bottom: 24px;
-            background: linear-gradient(135deg, var(--text-primary) 0%, var(--acc-color) 100%);
+            background: linear-gradient(135deg, #333333 0%, #6FA77B 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -162,13 +164,13 @@
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 1s forwards 0.6s;
-            box-shadow: 0 4px 15px rgba(181, 131, 141, 0.3);
+            box-shadow: 0 4px 15px rgba(111, 167, 123, 0.35);
         }
 
         .btn-primary:hover {
             background: var(--acc-color-hover);
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(181, 131, 141, 0.3);
+            box-shadow: 0 10px 20px rgba(111, 167, 123, 0.35);
         }
 
         /* Menu Section */
@@ -184,7 +186,7 @@
             border-radius: 24px;
             padding: 40px;
             transition: var(--transition);
-            border: 1px solid rgba(181, 131, 141, 0.05);
+            border: 1px solid rgba(111, 167, 123, 0.1);
         }
 
         .category-card:hover {
@@ -202,7 +204,7 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 16px;
-            border-bottom: 1px solid rgba(181, 131, 141, 0.1);
+            border-bottom: 1px solid rgba(111, 167, 123, 0.15);
             padding-bottom: 8px;
         }
 
@@ -211,7 +213,7 @@
         }
 
         .item-price {
-            font-weight: 600;
+            font-weight: 700;
             color: var(--acc-color);
         }
 
@@ -233,10 +235,10 @@
         footer {
             padding: 40px 0;
             text-align: center;
-            border-top: 1px solid rgba(181, 131, 141, 0.1);
+            border-top: 1px solid rgba(111, 167, 123, 0.2);
             color: var(--text-secondary);
             font-size: 0.9rem;
-            background: #ffffff;
+            background: #DDEADF;
         }
 
         /* Animations */
@@ -294,7 +296,7 @@
             padding: 60px 40px;
             border-radius: 32px;
             text-align: center;
-            border: 1px solid rgba(181, 131, 141, 0.05);
+            border: 1px solid rgba(111, 167, 123, 0.1);
         }
 
         .slide {
@@ -374,7 +376,10 @@
 
     <nav>
         <div class="nav-container">
-            <a href="#" class="logo">GOG<span>.</span></a>
+            <a href="#" class="logo">
+                <video id="logo-video" src="Logo Animation.mp4" autoplay muted playsinline></video>
+                <img id="logo-img" src="logo.webp" alt="GOG Cafe Logo" style="display: none;">
+            </a>
             <a href="#menu" class="btn btn-primary"
                 style="padding: 10px 20px; animation: none; opacity: 1; transform: none;">Menu</a>
         </div>
@@ -626,24 +631,24 @@
 
                     <p style="color: var(--acc-color); font-weight: 600; margin-bottom: 5px;">Chaat Combo:</p>
                     <div class="menu-item" style="margin-bottom: 15px;">
-                        <span class="item-name"
-                            style="font-size: 0.8rem; color: var(--text-secondary); flex: 1;">(Samosa Chaat, Royal
+                        <span class="item-name" style="color: var(--text-primary); flex: 1;">(Samosa
+                            Chaat, Royal
                             Kachori Chaat, Aloo Tikki Chaat)</span>
                         <span class="item-price">₹149</span>
                     </div>
 
                     <p style="color: var(--acc-color); font-weight: 600; margin-bottom: 5px;">Hungama Combo:</p>
                     <div class="menu-item" style="margin-bottom: 15px;">
-                        <span class="item-name"
-                            style="font-size: 0.8rem; color: var(--text-secondary); flex: 1;">(Classic Masala Maggi,
+                        <span class="item-name" style="color: var(--text-primary); flex: 1;">(Classic
+                            Masala Maggi,
                             Salted French Fries, Cold Coffee)</span>
                         <span class="item-price">₹189</span>
                     </div>
 
                     <p style="color: var(--acc-color); font-weight: 600; margin-bottom: 5px;">GOG Special Combo:</p>
                     <div class="menu-item" style="margin-bottom: 5px;">
-                        <span class="item-name"
-                            style="font-size: 0.8rem; color: var(--text-secondary); flex: 1;">(Cheesy Melt Maggi, Cheese
+                        <span class="item-name" style="color: var(--text-primary); flex: 1;">(Cheesy
+                            Melt Maggi, Cheese
                             Peri Peri Fries, 2 Classic Shakes)</span>
                         <span class="item-price">₹369</span>
                     </div>
@@ -754,6 +759,26 @@
 
             if (slides.length > 0) {
                 showSlides();
+            }
+
+            // Logo Animation Logic
+            const logoVideo = document.getElementById('logo-video');
+            const logoImg = document.getElementById('logo-img');
+
+            if (logoVideo && logoImg) {
+                // When video ends, wait 2 seconds, then swap to the image
+                logoVideo.addEventListener('ended', () => {
+                    setTimeout(() => {
+                        logoVideo.style.display = 'none';
+                        logoImg.style.display = 'block';
+                    }, 2000);
+                });
+
+                // Fallback in case the video can't play or errors
+                logoVideo.addEventListener('error', () => {
+                    logoVideo.style.display = 'none';
+                    logoImg.style.display = 'block';
+                });
             }
         });
     </script>
