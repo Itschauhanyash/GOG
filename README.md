@@ -13,13 +13,14 @@
 
 **Gang of Girls Cafe** is a women-owned, 100% vegetarian cafe located in the heart of **Surat, Gujarat**. This repository contains the official single-page website for the cafe — designed to showcase the menu, ambiance, customer reviews, and location in a beautiful, modern interface.
 
-The website is crafted with a warm **Gourmet Garden** aesthetic — smooth gradients, soft rose tones, and elegant typography that reflects the cafe's unique personality.
+The website is crafted with a refreshing **Light Green** aesthetic — natural tones, elegant typography, and dynamic animations that reflect the cafe's unique and vibrant personality.
 
 ---
 
 ## ✨ Features
 
-- 🎨 **Elegant Design** — Warm vanilla & rose color palette with glassmorphism-inspired cards
+- 🎨 **Elegant Design** — Refreshing light green & natural color palette with beautifully styled cards
+- 🎬 **Dynamic Branding** — Engaging animated logo that seamlessly transitions to a static visual on load
 - 📱 **Fully Responsive** — Optimized for mobile, tablet, and desktop screens
 - 🍴 **Complete Menu** — 9 food categories with all items and prices displayed
 - 🖼️ **Photo Gallery** — Showcasing the cafe's signature dishes
@@ -59,12 +60,14 @@ This is a **pure front-end** project with zero dependencies:
 
 ## 📁 Project Structure
 
-```
-GOG V2 white theme/
-├── index.html      # Main website (single-page application)
-├── food1.jpg       # Gallery image — Waffle dish
-├── food2.jpg       # Gallery image — Cafe specialty
-└── README.md       # Project documentation
+```text
+GOG V2 Light Green/
+├── index.html           # Main website (single-page application)
+├── logo.webp            # Static logo
+├── Logo Animation.mp4   # Animated logo sequence
+├── food1.jpg            # Gallery image — Waffle dish
+├── food2.jpg            # Gallery image — Cafe specialty
+└── README.md            # Project documentation
 ```
 
 ---
@@ -75,10 +78,10 @@ No build tools or server required. Just open the file in a browser:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Itschauhanyash/GOG-CAFE.git
+git clone https://github.com/Itschauhanyash/GOG.git
 
 # Open in browser
-cd GOG-CAFE
+cd GOG
 start index.html      # Windows
 open index.html       # macOS
 xdg-open index.html   # Linux
@@ -103,12 +106,12 @@ xdg-open index.html   # Linux
 
 | Token | Value | Usage |
 |---|---|---|
-| `--bg-light` | `#FFFBFA` | Page background |
-| `--acc-color` | `#B5838D` | Primary accent (rose) |
-| `--acc-color-hover` | `#E5989B` | Hover state |
-| `--text-primary` | `#2D2D2D` | Main text |
-| `--text-secondary` | `#6D6875` | Muted text |
-| `--card-bg` | `#FFFFFF` | Card backgrounds |
+| `--bg-light` | `#F6F3EC` | Page background |
+| `--acc-color` | `#6FA77B` | Primary accent (green) |
+| `--acc-color-hover` | `#5a9166` | Hover state |
+| `--text-primary` | `#333333` | Main text |
+| `--text-secondary` | `#555555` | Muted text |
+| `--card-bg` | `#DDEADF` | Card backgrounds |
 
 ---
 
